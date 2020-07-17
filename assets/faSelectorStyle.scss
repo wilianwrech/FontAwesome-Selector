@@ -1,33 +1,29 @@
 $accent: #7545E5;
 $white: #ffffff;
-
 [data-fa-selector] {
-  position:relative; // All selector elements must have relative positioning. (Looking to remove this dependancy in fututre updates)
+  position: relative; // All selector elements must have relative positioning. (Looking to remove this dependancy in fututre updates)
   cursor: pointer;
-
   .fa-child-container {
     position: absolute;
-    width:300px;
+    width: 400px;
     max-height: 350px;
     min-height: 200px;
     box-sizing: border-box;
     overflow-y: scroll;
-    z-index:1;
-    left:0;
+    z-index: 1;
+    left: 0;
     cursor: initial;
     background: white;
     color: black;
-    bottom:51px;
+    bottom: 51px;
     transform: translateY(-1px);
     border-radius: 5px;
     border: 1px solid darken($white, 3%);
-    box-shadow: 0 1px 1px rgba(72, 72, 72, 0.43);
-
-    > div.FACatagorys {
+    box-shadow: 0 0 36px 0 rgba(0, 0, 0, .3);
+    >div.FACatagorys {
       display: flex;
       width: 100%;
-
-      > span.FASCategory {
+      >span.FASCategory {
         flex-basis: 33.3%;
         padding: 9px 0;
         color: #7545E5;
@@ -35,7 +31,6 @@ $white: #ffffff;
         cursor: pointer;
         transition: background .3s;
         border-right: 1px solid darken($white, 8%);
-
         &:hover {
           background: darken($white, 6%);
         }
@@ -44,8 +39,7 @@ $white: #ffffff;
         }
       }
     }
-
-    > div:not(.FACatagorys) {
+    >div:not(.FACatagorys) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -53,7 +47,8 @@ $white: #ffffff;
       &.hidden {
         display: none;
       }
-      > i,> svg {
+      >i,
+      >svg {
         padding: .55em .2em;
         border-radius: 10px;
         transition: all .3s;
@@ -64,13 +59,17 @@ $white: #ffffff;
         font-size: 1.3rem;
         cursor: pointer;
         flex-direction: column-reverse;
-        flex-basis: calc(25% - 4px);
+        flex: 0 0 90px;
         box-sizing: border-box;
+        color: #333;
+        fill: #333;
+        text-align: center;
         &:not(i) {
           height: 55px;
           padding: .5em;
         }
-        > span,> strong {
+        >span,
+        >strong {
           font-size: 9px;
           font-style: normal;
           position: relative;
@@ -79,19 +78,19 @@ $white: #ffffff;
             font-weight: normal;
           }
         }
-        > svg {
+        >svg {
           height: 20px;
           width: 25px;
         }
         &:hover {
           background: darken($white, 3%);
           color: $accent;
+          fill: $accent;
           box-shadow: 0 1px 1px darken($white, 20%);
         }
       }
     }
-
-    > input {
+    >input {
       width: 100%;
       border: 0;
       background: rgb(243, 243, 243);
@@ -99,7 +98,6 @@ $white: #ffffff;
       padding: .8rem .8rem;
       max-height: 41px;
     }
-
     &::-webkit-scrollbar {
       width: 8px;
       border-radius: 5px;
@@ -120,5 +118,4 @@ $white: #ffffff;
     }
   }
   // Modern theme
-
 }
